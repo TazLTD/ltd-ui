@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body {
+    display: none;
+}
+
+.textui {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+
+.square {
+    background: linear-gradient(0deg, #1F2027 0%, #1F2027 0%, #1F2027 0%);
+    border: 2px solid #1F2027;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 3px;
+    animation-name: show;
+    animation-duration: 0.2s;
+    color: white;
+    font-weight: 400;
+    height: 37px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -314px;
+    left: -45px;
+}
+
+.dot {
+    background-color: #0FE3AA; /* Color of the dot */
+    width: 5px;
+    height: 5px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -280px;
+    left: -43px;
+    box-shadow: 0 0 5px #0FE3AA; /* Color of the shadow and its size */
+}
+
+
+@keyframes show {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
